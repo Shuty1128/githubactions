@@ -5,7 +5,7 @@ from discordwebhook import Discord
 
 
 database_ID = "9dd2f20bdb4745fcbce08ca569e6f40a"
-timestamp_file = "/Users/eishiroando/desktop/NotionAPI/last_timestamp.txt"
+timestamp_file = "githubactions/last_timestamp.txt"
 edited_timestamp_file = "/Users/eishiroando/desktop/NotionAPI/edited_timestamp.txt"
 base_URL = "https://api.notion.com/v1/databases/"
 webhook = "https://discord.com/api/webhooks/1076413559459819540/jVeJE6XPJQaCVZAx35tEqD3BY1p5udBAwj8Ha4etsvfowXglVf2FMW-ztbPafIC94iB7"
