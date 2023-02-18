@@ -5,8 +5,8 @@ from discordwebhook import Discord
 
 
 database_ID = "9dd2f20bdb4745fcbce08ca569e6f40a"
-timestamp_file = "githubactions/last_timestamp.txt"
-edited_timestamp_file = "/Users/eishiroando/desktop/NotionAPI/edited_timestamp.txt"
+timestamp_file = "last_timestamp.txt"
+## edited_timestamp_file = "edited_timestamp.txt"
 base_URL = "https://api.notion.com/v1/databases/"
 webhook = "https://discord.com/api/webhooks/1076413559459819540/jVeJE6XPJQaCVZAx35tEqD3BY1p5udBAwj8Ha4etsvfowXglVf2FMW-ztbPafIC94iB7"
 
@@ -33,12 +33,6 @@ except FileNotFoundError:
     # If the file does not exist, set the last timestamp to a very old date
     last_timestamp = "1970-01-01T00:00:00.000Z"
 
-try:
-    with open(edited_timestamp_file,"r") as l:
-        last_edited_time= l.read().strip()
-
-except FileNotFoundError:
-    last_edited_time = "1970-01-01T00:00:00.000Z"
 
 response = requests.post(base_URL + database_ID +"/query",headers=headers, data=query)
 results = response.json().get("results")
